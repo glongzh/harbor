@@ -17,6 +17,11 @@
 
 </br> </br>
 
+**Note**: 
+- Ensure docker buildx is enabled
+- run `docker run --privileged --rm tonistiigi/binfmt --install all` to install other platforms
+- `make all`
+
 **Note**: The `main` branch may be in an *unstable or even broken state* during development.
 Please use [releases](https://github.com/vmware/harbor/releases) instead of the `main` branch in order to get a stable set of binaries.
 

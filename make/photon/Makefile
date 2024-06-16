@@ -18,12 +18,12 @@ TIMESTAMP=$(shell date +"%Y%m%d")
 
 # docker parameters
 DOCKERCMD=$(shell which docker)
-DOCKERBUILD=$(DOCKERCMD) build --no-cache
+DOCKERBUILD=$(DOCKERCMD) buildx build --no-cache --platform linux/arm64 --push
 DOCKERBUILD_WITH_PULL_PARA=$(DOCKERBUILD) --pull=$(PULL_BASE_FROM_DOCKERHUB)
 DOCKERRMIMAGE=$(DOCKERCMD) rmi
 DOCKERIMAGES=$(DOCKERCMD) images
-IMAGENAMESPACE=goharbor
-BASEIMAGENAMESPACE=goharbor
+IMAGENAMESPACE=glongzh
+BASEIMAGENAMESPACE=glongzh
 
 # pushimage
 PUSHSCRIPTPATH=$(MAKEPATH)
